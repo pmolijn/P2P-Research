@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{70C9AFF8-2B54-4348-9C8A-415C64836985}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>PacketParser</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="PacketParser\Utils\IpAddressUtil.cs" />
+    <Compile Include="PacketParser\Packets\IPacket.cs" />
+    <Compile Include="PacketParser\Packets\AbstractPacket.cs" />
+    <Compile Include="PacketParser\Packets\PrismCaptureHeaderPacket.cs" />
+    <Compile Include="PacketParser\Packets\NetBiosPacket.cs" />
+    <Compile Include="PacketParser\Packets\LogicalLinkControlPacket.cs" />
+    <Compile Include="PacketParser\Packets\IEEE_802_11Packet.cs" />
+    <Compile Include="PacketParser\NetworkHostList.cs" />
+    <Compile Include="PacketParser\Fingerprints\ITtlDistanceCalculator.cs" />
+    <Compile Include="PacketParser\Fingerprints\AbstractTtlDistanceCalculator.cs" />
+    <Compile Include="PacketParser\Fingerprints\IOsFingerprinter.cs" />
+    <Compile Include="PacketParser\Fingerprints\P0fOsFingerprintCollection.cs" />
+    <Compile Include="PacketParser\Utils\ByteConverter.cs" />
+    <Compile Include="PacketParser\Events\MessageEventArgs.cs" />
+    <Compile Include="PacketParser\Packets\UpnpPacket.cs" />
+    <Compile Include="PacketParser\Packets\RawPacket.cs" />
+    <Compile Include="PacketParser\PacketHandlers\AbstractPacketHandler.cs" />
+    <Compile Include="PacketParser\PacketHandlers\ITcpSessionPacketHandler.cs" />
+    <Compile Include="PacketParser\PacketHandlers\SmbCommandPacketHandler.cs" />
+    <Compile Include="PacketParser\PacketHandlers\IrcPacketHandler.cs" />
+    <Compile Include="PacketParser\Events\SessionEventArgs.cs" />
+    <Compile Include="PacketParser\Events\KeywordEventArgs.cs" />
+    <Compile Include="PacketParser\CleartextDictionary\BloomFilter.cs" />
+    <Compile Include="PacketParser\Packets\ISessionPacket.cs" />
+    <Compile Include="PacketParser\Packets\SshPacket.cs" />
+    <Compile Include="PacketParser\Packets\CiscoHdlcPacket.cs" />
+    <Compile Include="PacketParser\NetworkCredential.cs" />
+    <Compile Include="PacketParser\Events\DnsRecordEventArgs.cs" />
+    <Compile Include="PacketParser\Packets\ErfFrame.cs" />
+    <Compile Include="PacketParser\PacketHandlers\IPacketHandler.cs" />
+    <Compile Include="PacketParser\PacketHandlers\SyslogPacketHandler.cs" />
+    <Compile Include="PacketParser\ISessionProtocolFinder.cs" />
+    <Compile Include="PacketParser\TcpPortProtocolFinder.cs" />
+    <Compile Include="PacketParser\Packets\IrcPacket.cs" />
+    <Compile Include="PacketParser\PacketHandlers\SshPacketHandler.cs" />
+    <Compile Include="PacketParser\PacketHandlers\SpotifyKeyExchangePacketHandler.cs" />
+    <Compile Include="PacketParser\NetworkServiceMetadata.cs" />
+    <Compile Include="PacketParser\Events\NetworkHostEventArgs.cs" />
+    <Compile Include="PacketParser\Utils\BoyerMoore.cs" />
+    <Compile Include="PacketParser\Packets\SyslogPacket.cs" />
+    <Compile Include="PacketParser\Packets\GrePacket.cs" />
+    <Compile Include="PacketParser\PacketHandlers\TftpPacketHandler.cs" />
+    <Compile Include="PacketParser\PacketHandlers\TabularDataStreamPacketHandler.cs" />
+    <Compile Include="PacketParser\Mime\UnbufferedReader.cs" />
+    <Compile Include="PacketParser\FileTransfer\FileStreamTypes.cs" />
+    <Compile Include="PacketParser\ISimpleParser.cs" />
+    <Compile Include="PacketParser\SimpleParser.cs" />
+    <Compile Include="PacketParser\PacketHandlers\NetBiosSessionServicePacketHandler.cs" />
+    <Compile Include="PacketParser\Properties\Resources.cs" />
+    <Compile Include="PacketParser\Packets\SslPacket.cs" />
+    <Compile Include="PacketParser\PacketHandlers\SmtpPacketHandler.cs" />
+    <Compile Include="PacketParser\PacketHandlers\NtlmSspPacketHandler.cs" />
+    <Compile Include="PacketParser\PacketHandlers\FtpPacketHandler.cs" />
+    <Compile Include="PacketParser\PacketHandlers\DnsPacketHandler.cs" />
+    <Compile Include="PacketParser\Fingerprints\EttarcapOsFingerprintCollection.cs" />
+    <Compile Include="PacketParser\IPopularityList!2.cs" />
+    <Compile Include="PacketParser\PopularityList!2.cs" />
+    <Compile Include="PacketParser\FileTransfer\FileStreamAssemblerList.cs" />
+    <Compile Include="PacketParser\Events\FileEventArgs.cs" />
+    <Compile Include="PacketParser\CleartextDictionary\WordDictionary.cs" />
+    <Compile Include="PacketParser\Packets\ITransportLayerPacket.cs" />
+    <Compile Include="PacketParser\Packets\TabularDataStreamPacket.cs" />
+    <Compile Include="PacketParser\Packets\NtlmSspPacket.cs" />
+    <Compile Include="PacketParser\FileTransfer\FileStreamAssembler.cs" />
+    <Compile Include="PacketParser\Events\ParametersEventArgs.cs" />
+    <Compile Include="PacketParser\Packets\LinuxCookedCapture.cs" />
+    <Compile Include="PacketParser\PacketHandlers\UpnpPacketHandler.cs" />
+    <Compile Include="PacketParser\NetworkHost.cs" />
+    <Compile Include="PacketParser\Mime\PartBuilder.cs" />
+    <Compile Include="PacketParser\Packets\NullLoopbackPacket.cs" />
+    <Compile Include="PacketParser\Packets\IIPPacket.cs" />
+    <Compile Include="PacketParser\Packets\IPv6Packet.cs" />
+    <Compile Include="PacketParser\Packets\FtpPacket.cs" />
+    <Compile Include="PacketParser\NetworkPacket.cs" />
+    <Compile Include="PacketParser\Mime\ByteArrayStream.cs" />
+    <Compile Include="PacketParser\ISessionProtocolFinderFactory.cs" />
+    <Compile Include="PacketParser\PortProtocolFinderFactory.cs" />
+    <Compile Include="PacketParser\Packets\CifsPacket.cs" />
+    <Compile Include="PacketParser\PacketHandlers\DhcpPacketHandler.cs" />
+    <Compile Include="PacketParser\Frame.cs" />
+    <Compile Include="PacketParser\Fingerprints\SatoriTcpOsFingerprinter.cs" />
+    <Compile Include="PacketParser\Events\CleartextWordsEventArgs.cs" />
+    <Compile Include="PacketParser\Packets\PpiPacket.cs" />
+    <Compile Include="PacketParser\Packets\SmtpPacket.cs" />
+    <Compile Include="PacketParser\Packets\IEEE_802_11RadiotapPacket.cs" />
+    <Compile Include="PacketParser\Mime\MultipartPart.cs" />
+    <Compile Include="PacketParser\LatestFramesQueue.cs" />
+    <Compile Include="PacketParser\PacketHandlers\IEC_104_PacketHandler.cs" />
+    <Compile Include="PacketParser\Utils\KnuthMorrisPratt.cs" />
+    <Compile Include="PacketParser\PacketHandlers\UnusedTcpSessionProtocolsHandler.cs" />
+    <Compile Include="PacketParser\PacketHandlers\OscarPacketHandler.cs" />
+    <Compile Include="PacketParser\PacketHandlers\NetBiosNameServicePacketHandler.cs" />
+    <Compile Include="PacketParser\NewNetworkHostHandler.cs" />
+    <Compile Include="PacketParser\AnomalyEventHandler.cs" />
+    <Compile Include="PacketParser\ParameterEventHandler.cs" />
+    <Compile Include="PacketParser\NetworkHostEventHandler.cs" />
+    <Compile Include="PacketParser\DnsRecordEventHandler.cs" />
+    <Compile Include="PacketParser\BufferUsageEventHandler.cs" />
+    <Compile Include="PacketParser\FrameEventHandler.cs" />
+    <Compile Include="PacketParser\CleartextWordsEventHandler.cs" />
+    <Compile Include="PacketParser\FileEventHandler.cs" />
+    <Compile Include="PacketParser\KeywordEventHandler.cs" />
+    <Compile Include="PacketParser\CredentialEventHandler.cs" />
+    <Compile Include="PacketParser\SessionEventHandler.cs" />
+    <Compile Include="PacketParser\MessageEventHandler.cs" />
+    <Compile Include="PacketParser\PacketHandler.cs" />
+    <Compile Include="PacketParser\Events\FrameEventArgs.cs" />
+    <Compile Include="PacketParser\IPortProtocolFinder.cs" />
+    <Compile Include="PacketParser\UdpPortProtocolFinder.cs" />
+    <Compile Include="PacketParser\Packets\PointToPointPacket.cs" />
+    <Compile Include="PacketParser\Packets\PointToPointOverEthernetPacket.cs" />
+    <Compile Include="PacketParser\Packets\SipPacket.cs" />
+    <Compile Include="PacketParser\Packets\NetBiosNameServicePacket.cs" />
+    <Compile Include="PacketParser\Packets\IEEE_802_1Q_VlanPacket.cs" />
+    <Compile Include="PacketParser\Packets\DnsPacket.cs" />
+    <Compile Include="PacketParser\Packets\DhcpPacket.cs" />
+    <Compile Include="PacketParser\Packets\ArpPacket.cs" />
+    <Compile Include="PacketParser\PacketHandlers\HpSwitchProtocolPacketHandler.cs" />
+    <Compile Include="PacketParser\Fingerprints\MacCollection.cs" />
+    <Compile Include="PacketParser\Packets\Ethernet2Packet.cs" />
+    <Compile Include="PacketParser\PacketHandlers\SipPacketHandler.cs" />
+    <Compile Include="PacketParser\PacketHandlers\HttpPacketHandler.cs" />
+    <Compile Include="PacketParser\NetworkPacketList.cs" />
+    <Compile Include="PacketParser\Events\CredentialEventArgs.cs" />
+    <Compile Include="PacketParser\Utils\StringManglerUtil.cs" />
+    <Compile Include="PacketParser\Packets\OscarFileTransferPacket.cs" />
+    <Compile Include="PacketParser\Packets\HpSwitchProtocolPacket.cs" />
+    <Compile Include="PacketParser\PacketHandlers\NetBiosDatagramServicePacketHandler.cs" />
+    <Compile Include="PacketParser\NetworkTcpSession.cs" />
+    <Compile Include="PacketParser\Fingerprints\SatoriDhcpOsFingerprinter.cs" />
+    <Compile Include="PacketParser\Packets\IEC_60870_5_104Packet.cs" />
+    <Compile Include="PacketParser\Packets\UdpPacket.cs" />
+    <Compile Include="PacketParser\Packets\OscarPacket.cs" />
+    <Compile Include="PacketParser\Packets\TlsRecordPacket.cs" />
+    <Compile Include="PacketParser\Packets\SpotifyKeyExchangePacket.cs" />
+    <Compile Include="PacketParser\Packets\PacketFactory.cs" />
+    <Compile Include="PacketParser\Packets\NetBiosSessionService.cs" />
+    <Compile Include="PacketParser\Packets\NetBiosDatagramServicePacket.cs" />
+    <Compile Include="PacketParser\Packets\IPv4Packet.cs" />
+    <Compile Include="PacketParser\Packets\HttpPacket.cs" />
+    <Compile Include="PacketParser\PacketHandlers\TlsRecordPacketHandler.cs" />
+    <Compile Include="PacketParser\Events\BufferUsageEventArgs.cs" />
+    <Compile Include="PacketParser\Mime\Rfc2047Parser.cs" />
+    <Compile Include="PacketParser\ApplicationLayerProtocol.cs" />
+    <Compile Include="PacketParser\TransportLayerProtocol.cs" />
+    <Compile Include="PacketParser\Packets\TftpPacket.cs" />
+    <Compile Include="PacketParser\Packets\TcpPacket.cs" />
+    <Compile Include="PacketParser\PacketHandlers\OscarFileTransferPacketHandler.cs" />
+    <Compile Include="PacketParser\FileTransfer\ReconstructedFile.cs" />
+    <Compile Include="PacketParser\Events\AnomalyEventArgs.cs" />
+    <EmbeddedResource Include="PacketParser.Properties.Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetworkWrapper\NetworkWrapper.csproj">
+      <Project>{4bcc1b31-4215-4a54-b102-3584c79d0fd6}</Project>
+      <Name>NetworkWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PcapFileHandler\pcapFileIO.csproj">
+      <Project>{5fd510c7-04d1-45bd-a07b-a22ddd20dc1c}</Project>
+      <Name>pcapFileIO</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

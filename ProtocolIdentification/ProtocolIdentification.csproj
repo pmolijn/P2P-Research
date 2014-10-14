@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>2737f452-d7c0-4ae2-8d55-97dab9587ae0</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>ProtocolIdentification</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\IAttributeMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\NibblePositionPopularityMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\FirstBitPositionsMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\First2OrderedPacketsFirstNByteNibblesMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\First4PacketsFirst32BytesEqualityMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\First4OrderedDirectionFirstNByteNibblesMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\First2OrderedFirst4CharWordsMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\First2PacketsPerDirectionFirst5BytesDifferencesMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\DirectionPacketSizeChange.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\ActionReactionFirst3ByteHashMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\First4DirectionFirstNByteNibblesMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\PacketLengthDistributionMeterFirst3.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\First2PacketsFirst16ByteHashCountsMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\PacketPairLengthPrimesMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\First4PacketsByteReoccurringDistanceWithByteHashMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\BytePairsReocurringIn32FirstBytesMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\ByteValueOffsetHashOfFirst32BytesInFirst4PacketsMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\First2PacketsFirst8ByteHashDirectionCountsMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\BytePairsReocurringOffsetsIn32FirstBytesMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\BytePairsReocurringCountIn32FirstBytesMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\First2PacketsFirst3ByteHashAndPacketLengthMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\ByteFrequencyOfFirstPacketBytesMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\First4PacketsByteFrequencyMeter.cs" />
+    <Compile Include="ProtocolIdentification\ConvertHelper.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\NibblePositionFrequencyMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeFingerprintHandler.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\First4OrderedDirectionPacketSizeMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\PacketLengthDistributionMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\AccumulatedDirectionBytesMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\DirectionPacketLengthDistributionMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\DirectionByteFrequencyMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\FirstServerPacketFirstBitPositionsMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\FirstPacketPerDirectionFirstNByteNibblesMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\First2OrderedFirstBitPositionsMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\First4PacketsFirst16BytePairsMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\ByteFrequencyMeter.cs" />
+    <Compile Include="ProtocolIdentification\Util.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\First4OrderedDirectionInterPacketDelayMeter.cs" />
+    <Compile Include="ProtocolIdentification\AttributeMeters\ByteBitValueMeter.cs" />
+    <Compile Include="ProtocolIdentification\ProtocolModel.cs" />
+  </ItemGroup>
+</Project>

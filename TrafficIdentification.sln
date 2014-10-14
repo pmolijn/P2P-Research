@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pcapX", "pcapX\pcapX.csproj", "{ADF31DC6-1CBE-4F6D-B93E-EFE0D13CF3C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkWrapper", "NetworkWrapper\NetworkWrapper.csproj", "{4BCC1B31-4215-4A54-B102-3584C79D0FD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacketParser", "PacketParser\PacketParser.csproj", "{70C9AFF8-2B54-4348-9C8A-415C64836985}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pcapFileIO", "PcapFileHandler\pcapFileIO.csproj", "{5FD510C7-04D1-45BD-A07B-A22DDD20DC1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADF31DC6-1CBE-4F6D-B93E-EFE0D13CF3C1}.Debug|x86.ActiveCfg = Debug|x86
+		{ADF31DC6-1CBE-4F6D-B93E-EFE0D13CF3C1}.Debug|x86.Build.0 = Debug|x86
+		{ADF31DC6-1CBE-4F6D-B93E-EFE0D13CF3C1}.Release|x86.ActiveCfg = Release|x86
+		{ADF31DC6-1CBE-4F6D-B93E-EFE0D13CF3C1}.Release|x86.Build.0 = Release|x86
+		{4BCC1B31-4215-4A54-B102-3584C79D0FD6}.Debug|x86.ActiveCfg = Debug|x86
+		{4BCC1B31-4215-4A54-B102-3584C79D0FD6}.Debug|x86.Build.0 = Debug|x86
+		{4BCC1B31-4215-4A54-B102-3584C79D0FD6}.Release|x86.ActiveCfg = Release|x86
+		{4BCC1B31-4215-4A54-B102-3584C79D0FD6}.Release|x86.Build.0 = Release|x86
+		{70C9AFF8-2B54-4348-9C8A-415C64836985}.Debug|x86.ActiveCfg = Debug|x86
+		{70C9AFF8-2B54-4348-9C8A-415C64836985}.Debug|x86.Build.0 = Debug|x86
+		{70C9AFF8-2B54-4348-9C8A-415C64836985}.Release|x86.ActiveCfg = Release|x86
+		{70C9AFF8-2B54-4348-9C8A-415C64836985}.Release|x86.Build.0 = Release|x86
+		{5FD510C7-04D1-45BD-A07B-A22DDD20DC1C}.Debug|x86.ActiveCfg = Debug|x86
+		{5FD510C7-04D1-45BD-A07B-A22DDD20DC1C}.Debug|x86.Build.0 = Debug|x86
+		{5FD510C7-04D1-45BD-A07B-A22DDD20DC1C}.Release|x86.ActiveCfg = Release|x86
+		{5FD510C7-04D1-45BD-A07B-A22DDD20DC1C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
